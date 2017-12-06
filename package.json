@@ -9,6 +9,7 @@
     "build": "rm -rf dist/ && webpack"
   },
   "devDependencies": {
+    "name-all-modules-plugin": "^1.0.1",
     "webpack": "^3.10.0"
   },
   "dependencies": {
