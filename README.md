@@ -6,3 +6,6 @@
 4. Use `NamedModulesPlugin`.
 5. Use `NamedChunksPlugin`.
 6. Use `NameAllModulesPlugin` - `npm i -D name-all-modules-plugin`.
+
+## To read:
+* https://medium.com/webpack/predictable-long-term-caching-with-webpack-d3eee1d3fa31
