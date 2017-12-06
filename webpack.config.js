@@ -19,7 +19,8 @@ module.exports = {
             minChunks: isVendor
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'bootstrap'
-        })
+            name: 'runtime'
+        }),
+        new webpack.NamedModulesPlugin(),
     ]
 };

@@ -6,7 +6,7 @@
   "author": "Alexander Mostovenko <alexmost1989@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "rm -rf dist/ && webpack"
   },
   "devDependencies": {
     "webpack": "^3.10.0"
