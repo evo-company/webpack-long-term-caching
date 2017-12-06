@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const NameAllModulesPlugin = require('name-all-modules-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
 
 const isVendor = (opts) => (
     opts.userRequest && opts.userRequest.indexOf('node_modules') >= 0
@@ -20,10 +19,10 @@ module.exports = {
             name: 'vendor',
             minChunks: isVendor
         }),
+        // runtime chunk
         new webpack.optimize.CommonsChunkPlugin({
             name: 'runtime'
         }),
-        new ManifestPlugin(),
         // plugins for proper chunks naming
         new webpack.NamedChunksPlugin((chunk) => {
             if (chunk.name) { 
