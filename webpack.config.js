@@ -24,13 +24,8 @@ module.exports = {
             name: 'runtime'
         }),
         // plugins for proper chunks naming
-        new webpack.NamedChunksPlugin((chunk) => {
-            if (chunk.name) { 
-                return chunk.name; 
-            } 
-            return chunk.modules.map(m => path.relative(m.context, m.request)).join("_");
-        }),
-        new webpack.NamedModulesPlugin(),
+        new webpack.NamedChunksPlugin(),
+        new webpack.HashedModuleIdsPlugin(),
         new NameAllModulesPlugin(),
     ]
 };
